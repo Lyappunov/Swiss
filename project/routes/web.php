@@ -141,6 +141,12 @@
     Route::get('/projects/closed', 'Window\ProjectController@closed')->name('project-closed');
 
     Route::get('/invoices', 'Window\ProjectController@invoices')->name('invoices');
+    Route::get('/offerte_bestellung', 'Window\ProjectController@offerte_bestellung')->name('offerte_bestellung');
+    Route::get('/einkauf', 'Window\ProjectController@einkauf')->name('einkauf');
+    Route::get('/offerte_and_Vertrag', 'Window\ProjectController@offerte_and_Vertrag')->name('offerte_and_Vertrag');
+    Route::get('/rechnung', 'Window\ProjectController@rechnung')->name('rechnung');
+    Route::get('/kommunikation', 'Window\ProjectController@kommunikation')->name('kommunikation');
+    Route::get('/termine', 'Window\ProjectController@termine')->name('termine');
     Route::get('/event/new', 'Window\ProjectController@new_event')->name('new-event');
     Route::get('/event/all', 'Window\ProjectController@all_events')->name('all-events');
     Route::get('/guaratees', 'Window\ProjectController@guaratees')->name('guaratees');

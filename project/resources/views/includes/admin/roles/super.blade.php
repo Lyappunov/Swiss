@@ -50,6 +50,25 @@
         <a href="{{ route('invoices') }}" class=" wave-effect"><i class="icofont-file-document"></i>{{ __('Invoices') }}</a>
     </li>
     <li>
+        <a href="{{ route('offerte_bestellung') }}" class=" wave-effect"><i class="icofont-file-document"></i>{{ __('Offerte Bestellung') }}</a>
+    </li>
+    <li>
+        <a href="{{ route('einkauf') }}" class=" wave-effect"><i class="icofont-file-document"></i>{{ __('Einkauf') }}</a>
+    </li>
+    <li>
+        <a href="{{ route('offerte_and_Vertrag') }}" class=" wave-effect"><i class="icofont-file-document"></i>{{ __('Offerte & Vertrag') }}</a>
+    </li>
+    <li>
+        <a href="{{ route('rechnung') }}" class=" wave-effect"><i class="icofont-file-document"></i>{{ __('Rechnung') }}</a>
+    </li>
+    <li>
+        <a href="{{ route('kommunikation') }}" class=" wave-effect"><i class="icofont-file-document"></i>{{ __('Kommunikation') }}</a>
+    </li>
+    <li>
+        <a href="{{ route('termine') }}" class=" wave-effect"><i class="icofont-file-document"></i>{{ __('Termine') }}</a>
+    </li>
+    
+    <li>
         <a href="{{ route('admin-message-index') }}" class=" wave-effect"><i class="icofont-speech-comments"></i>{{ __('Communications') }}</a>
     </li>
 

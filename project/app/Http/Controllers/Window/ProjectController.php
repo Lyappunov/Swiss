@@ -297,6 +297,30 @@ class ProjectController extends Controller
     {
         return view('window.projects.blank');
     }
+    public function offerte_bestellung()
+    {
+        return view('window.projects.blank');
+    }
+    public function einkauf()
+    {
+        return view('window.projects.blank');
+    }
+    public function offerte_and_Vertrag()
+    {
+        return view('window.projects.blank');
+    }
+    public function rechnung()
+    {
+        return view('window.projects.blank');
+    }
+    public function kommunikation()
+    {
+        return view('window.projects.blank');
+    }
+    public function termine()
+    {
+        return view('window.projects.blank');
+    }
     public function new_event()
     {
         return view('window.projects.blank');

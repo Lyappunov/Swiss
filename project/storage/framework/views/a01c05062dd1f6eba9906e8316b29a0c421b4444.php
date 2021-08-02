@@ -52,6 +52,25 @@
         <a href="<?php echo e(route('invoices')); ?>" class=" wave-effect"><i class="icofont-file-document"></i><?php echo e(__('Invoices')); ?></a>
     </li>
     <li>
+        <a href="<?php echo e(route('offerte_bestellung')); ?>" class=" wave-effect"><i class="icofont-file-document"></i><?php echo e(__('Offerte Bestellung')); ?></a>
+    </li>
+    <li>
+        <a href="<?php echo e(route('einkauf')); ?>" class=" wave-effect"><i class="icofont-file-document"></i><?php echo e(__('Einkauf')); ?></a>
+    </li>
+    <li>
+        <a href="<?php echo e(route('offerte_and_Vertrag')); ?>" class=" wave-effect"><i class="icofont-file-document"></i><?php echo e(__('Offerte & Vertrag')); ?></a>
+    </li>
+    <li>
+        <a href="<?php echo e(route('rechnung')); ?>" class=" wave-effect"><i class="icofont-file-document"></i><?php echo e(__('Rechnung')); ?></a>
+    </li>
+    <li>
+        <a href="<?php echo e(route('kommunikation')); ?>" class=" wave-effect"><i class="icofont-file-document"></i><?php echo e(__('Kommunikation')); ?></a>
+    </li>
+    <li>
+        <a href="<?php echo e(route('termine')); ?>" class=" wave-effect"><i class="icofont-file-document"></i><?php echo e(__('Termine')); ?></a>
+    </li>
+    
+    <li>
         <a href="<?php echo e(route('admin-message-index')); ?>" class=" wave-effect"><i class="icofont-speech-comments"></i><?php echo e(__('Communications')); ?></a>
     </li>
 
