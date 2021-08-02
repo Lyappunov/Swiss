@@ -6,7 +6,10 @@
 
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
-
+					<?php 
+						$name_array = array('Toplam Ürün','SANDIK BEDELİ','İSTANBUL NAKLİYE','İSTANBUL NAKLİYE','VERZOLLUNG ','MWST','MONTAJ','Toplam PAKETLEME  Nakliye Ve Montaj','GENEL TOPLAM Tüm maliyet');
+						$alphabet = array('A','B','C','D','E','F','G','H','I','J','K','L');
+					?>
 						<div class="content-area">
 							<div class="mr-breadcrumb">
 								<div class="row">
@@ -85,80 +88,6 @@
 																
 															</div>
 
-															<div class="col-lg-6 col-12">
-																<div class="row">
-																	<div class="col-lg-4">
-																	<div class="left-area">
-																		<h4 class="heading"><?php echo e(__('Project Image')); ?> *</h4>
-																	</div>
-																	</div>
-																	<div class="col-lg-7">
-																		<div class="row">
-																			<div class="panel panel-body">
-																				<div class="span4 cropme text-center" id="landscape" style="width: 400px; height: 400px; border: 1px dashed black;">
-																				</div>
-																			</div>
-																		</div>
-
-																			<a href="javascript:;" id="crop-image" class="d-inline-block mybtn1">
-																				<i class="icofont-upload-alt"></i> <?php echo e(__('Upload Image Here')); ?>
-
-																			</a>
-																	</div>
-																</div>
-
-																<input type="hidden" id="feature_photo" name="photo" value="">
-
-																<input type="file" name="gallery[]" class="hidden" id="uploadgallery" accept="image/*" multiple>
-																
-																<div class="row">
-																	<div class="col-lg-4">
-																		<div class="left-area">
-																			<h4 class="heading">
-																				<?php echo e(__('Project Gallery Images')); ?>
-
-																			</h4>
-																		</div>
-																	</div>
-																	<div class="col-lg-7">
-																		<a href="#" class="set-gallery"  data-toggle="modal" data-target="#setgallery">
-																			<i class="icofont-plus"></i> <?php echo e(__('Set Gallery')); ?>
-
-																		</a>
-																	</div>
-																</div>
-
-																<div class="showbox">
-																	<div class="row">
-																		<div class="col-lg-4">
-																			<div class="left-area">
-
-																			</div>
-																		</div>
-																		<div class="col-lg-7">
-																			<div class="featured-keyword-area">
-																				<div class="feature-tag-top-filds" id="whole-section">
-																					<div class="feature-area">
-																						<span class="remove whole-remove"><i class="fas fa-times"></i></span>
-																						<div class="row">
-																							<div class="col-lg-6">
-																							<input type="number" name="whole_sell_qty[]" class="input-field" placeholder="<?php echo e(__('Enter Quantity')); ?>" min="0">
-																							</div>
-
-																							<div class="col-lg-6">
-																							<input type="number" name="whole_sell_discount[]" class="input-field" placeholder="<?php echo e(__('Enter Discount Percentage')); ?>" min="0" />
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-
-																				<a href="javascript:;" id="whole-btn" class="add-fild-btn"><i class="icofont-plus"></i> <?php echo e(__('Add More Field')); ?></a>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-
 														</div>
 
 														<div style="margin:30px 0px; text-align:center;">
@@ -212,20 +141,15 @@
 																			</td>
 																		</tr>
 																	<?php endfor; ?>
-																	<tr class="hide">
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td>
-																			<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
-																		</td>
+																	<?php for($j = 0; $j < sizeof($name_array); $j++): ?>
+																		<tr>
+																			<td><?php echo e($j+11); ?></td>
+																			<td><?php echo e($name_array[$j]); ?></td>
+																			<td colspan='7'>&nbsp;</td>
+																			<td>&nbsp;</td>
+																		</tr>
+																	<?php endfor; ?>
+																	<tr>
 																	</tr>
 																</table>
 															</div>
@@ -246,24 +170,24 @@
 
 														<div class="order_table_1">
 															<div style="text-align:center;">
-																<h3>Maas und Infos Gefäll Dach</h3>
+																<h3 style="color:red">Ölcüler ve Bilgiler Egimli Cati</h3>
 															</div>
 															<div id="order_table_1" class="order-table-editable" >
 																
 																<table class="table">
 																	<tr>
 																		<th attr="number">Pos</th>
-																		<th attr="tech">Technische Info</th>
-																		<th attr="rear">Hinten Maas (mm)</th>
-																		<th attr="front">Vorne Maas (mm)</th>
-																		<th attr="notify">Notize</th>
+																		<th attr="tech">Teknik Aciklama</th>
+																		<th attr="rear">Arka Ölcü (mm)</th>
+																		<th attr="front">Ön Ölcü (mm)</th>
+																		<th attr="notify">Not</th>
 																		<th>
 																			<span class="table-add-order" attr="1"><i class="icofont-plus-square"></i></span>
 																		</th>
 																	</tr>
-																	<?php for($i=1;$i<=12;$i++): ?>
+																	<?php for($i=0; $i < sizeof($alphabet);$i++): ?>
 																		<tr>
-																			<td contenteditable="true"><?php echo e($i); ?></td>
+																			<td contenteditable="true"><?php echo e($alphabet[$i]); ?></td>
 																			<td contenteditable="true"></td>
 																			<td contenteditable="true"></td>
 																			<td contenteditable="true"></td>
@@ -295,17 +219,17 @@
 																<table class="table">
 																	<tr>
 																		<th attr="number">Pos</th>
-																		<th attr="tech">Technische Info</th>
-																		<th attr="rear">Hinten Maas (mm)</th>
-																		<th attr="front">Vorne Maas (mm)</th>
-																		<th attr="notify">Notize</th>
+																		<th attr="tech">Teknik Aciklama</th>
+																		<th attr="rear">Arka Ölcü (mm)</th>
+																		<th attr="front">Ön Ölcü (mm)</th>
+																		<th attr="notify">Not</th>
 																		<th>
 																			<span class="table-add-order" attr="2"><i class="icofont-plus-square"></i></span>
 																		</th>
 																	</tr>
-																	<?php for($i=1;$i<=12;$i++): ?>
+																	<?php for($i = 0; $i < sizeof($alphabet);$i++): ?>
 																		<tr>
-																			<td contenteditable="true"><?php echo e($i); ?></td>
+																			<td contenteditable="true"><?php echo e($alphabet[$i]); ?></td>
 																			<td contenteditable="true"></td>
 																			<td contenteditable="true"></td>
 																			<td contenteditable="true"></td>

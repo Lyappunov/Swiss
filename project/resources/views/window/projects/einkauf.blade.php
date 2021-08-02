@@ -7,18 +7,21 @@
 
 @endsection
 @section('content')
+<?php
+	$name_array = array('Kiste Preis',' Transport İSTANBUL','Transport Schweiz','VERZOLLUNG','MWST','Montage','Total Pos.12-17','Gesamt Total','Verkaufspreis Brutto','Rabatt','Umsatz');
+?>
 
 						<div class="content-area">
 							<div class="mr-breadcrumb">
 								<div class="row">
 									<div class="col-lg-12">
-											<h4 class="heading">{{ __('New Project') }} <a class="add-btn" href="{{ route('admin.dashboard') }}"><i class="fas fa-arrow-left"></i> {{ __('Back') }}</a></h4>
+											<h4 class="heading">{{ __('Einkauf ') }} <a class="add-btn" href="{{ route('admin.dashboard') }}"><i class="fas fa-arrow-left"></i> {{ __('Back') }}</a></h4>
 											<ul class="links">
 												<li>
-													<a href="javascript:;">{{ __('Projects') }} </a>
+													<a href="javascript:;">{{ __('Dashboard') }} </a>
 												</li>
                                                 <li>
-                                                    <a href="javascript:;">{{ __('New Project') }} </a>
+                                                    <a href="javascript:;">{{ __('Einkauf ') }} </a>
                                                 </li>
 											</ul>
 									</div>
@@ -84,10 +87,6 @@
 															</div>
 														</div>
 
-														<div style="margin:30px 0px; text-align:center;">
-															<img  src="{{asset('assets/images/window1.png')}}" alt="" style="width:70%;">
-														</div>
-
 														<div class="project_table" id="project_table_1">
 															<div style="text-align:center;">
 																<h3>Varient 1</h3>
@@ -134,117 +133,34 @@
 																			</td>
 																		</tr>
 																	@endfor
-																	<tr class="hide">
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
+																	<tr>
+																		<td>11</td>
+																		<td >Toplam Ürün</td>
+																		<td colspan='6'>&nbsp;</td>
+																		<td >&nbsp;</td>
+																		<td >&nbsp;</td>
+																		
 																		<td>
 																			<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
 																		</td>
 																	</tr>
+																	@for($j=0; $j < sizeof($name_array); $j++)
+																		<tr>
+																			<td contenteditable="true">{{$j + 12}}</td>
+																			<td contenteditable="true">{{$name_array[$j]}}</td>
+																			<td contenteditable="true" colspan='6'></td>
+																			<td contenteditable="true" colspan='2'></td>
+																			<td>
+																				<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
+																			</td>
+																		</tr>
+																	@endfor
 																</table>
 															</div>
 															<p id="export"></p>
 														</div>
 
-														<span id="table_add" class="btn btn-primary">
-															Add <i class="icofont-plus-circle"></i>
-														</span>
-
-														<span id="table_delete" class="btn btn-danger">
-															Delete <i class="icofont-ui-delete"></i>
-														</span>
-
-														<div style="margin:30px 0px; text-align:center;">
-															<img  src="{{asset('assets/images/window2.png')}}" alt="" style="width:70%;">
-														</div>
-
-														<div class="order_table_1">
-															<div style="text-align:center;">
-																<h3>Maas und Infos Gefäll Dach</h3>
-															</div>
-															<div id="order_table_1" class="order-table-editable" >
-																<table class="table">
-																	<tr>
-																		<th attr="number">Pos</th>
-																		<th attr="tech">Technische Info</th>
-																		<th attr="rear">Hinten Maas (mm)</th>
-																		<th attr="front">Vorne Maas (mm)</th>
-																		<th attr="notify">Notize</th>
-																		<th>
-																			<span class="table-add-order" attr="1"><i class="icofont-plus-square"></i></span>
-																		</th>
-																	</tr>
-																	@for($i=1;$i<=12;$i++)
-																		<tr>
-																			<td contenteditable="true">{{$i}}</td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td>
-																				<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
-																			</td>
-																		</tr>
-																	@endfor
-																	<tr class="hide_order">
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td>
-																			<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
-																		</td>
-																	</tr>
-																</table>
-															</div>
-														</div>
-
-														<div class="order_table_2">
-															<div style="text-align:center;">
-																<h3>Maas und Infos Flach Dach</h3>
-															</div>
-															<div id="order_table_2" class="order-table-editable" >
-																<table class="table">
-																	<tr>
-																		<th attr="number">Pos</th>
-																		<th attr="tech">Technische Info</th>
-																		<th attr="rear">Hinten Maas (mm)</th>
-																		<th attr="front">Vorne Maas (mm)</th>
-																		<th attr="notify">Notize</th>
-																		<th>
-																			<span class="table-add-order" attr="2"><i class="icofont-plus-square"></i></span>
-																		</th>
-																	</tr>
-																	@for($i=1;$i<=12;$i++)
-																		<tr>
-																			<td contenteditable="true">{{$i}}</td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td>
-																				<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
-																			</td>
-																		</tr>
-																	@endfor
-																</table>
-															</div>
-														</div>																
-
-														<input type="hidden" name="status" value="1" />
 														
-														<input type="hidden" id="project_table_info" name="project_table_info" value="">
-														<input type="hidden" id="project_order_table_info" name="project_order_table_info" value="">
-														<input type="hidden" name="admin_id" value="{{Auth::guard('admin')->user()->id}}">
 
 														<div class="text-center">
 															<span onClick="onSumbitClick()" class="btn btn-primary">{{ __('Create Project') }}</span>

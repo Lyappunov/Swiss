@@ -11,13 +11,13 @@
 							<div class="mr-breadcrumb">
 								<div class="row">
 									<div class="col-lg-12">
-											<h4 class="heading"><?php echo e(__('Rechnung')); ?> <a class="add-btn" href="<?php echo e(route('admin.dashboard')); ?>"><i class="fas fa-arrow-left"></i> <?php echo e(__('Back')); ?></a></h4>
+											<h4 class="heading"><?php echo e(__('Kommunikation ')); ?> <a class="add-btn" href="<?php echo e(route('admin.dashboard')); ?>"><i class="fas fa-arrow-left"></i> <?php echo e(__('Back')); ?></a></h4>
 											<ul class="links">
 												<li>
 													<a href="javascript:;"><?php echo e(__('Projects')); ?> </a>
 												</li>
                                                 <li>
-                                                    <a href="javascript:;"><?php echo e(__('Rechnung')); ?> </a>
+                                                    <a href="javascript:;"><?php echo e(__('Kommunikation ')); ?> </a>
                                                 </li>
 											</ul>
 									</div>
@@ -178,25 +178,35 @@
 															</div>
 														</div>
 
+														
+
 														<div class="project_table" id="project_table_1">
 															<div style="text-align:center;">
-																<h3>Rechnung</h3>
+																<h3>Kommunikationsverlauf</h3>
 															</div>
 															<div id="table_1" class="table-editable" >
+															<?php for($j=0; $j < 3; $j++): ?>
 																<table class="table">
 																	<tr>
-																		<th>Pos</th>
-																		<th>System</th>
-																		<th>Breite A(mm)</th>
-																		<th>Tiefe D(mm)</th>
+																		<th>Nr</th>
+																		<th>Thema</th>
+																		<th>Zum Erledigen / Info</th>
+																		<th>Gespräch Datum</th>
+																		<th>Erledigen bis</th>
+																		<th>Stand</th>
+																		<th>Stand Datum</th>
+																		
 																	</tr>
-																	<?php for($i=1;$i<=13;$i++): ?>
+																	<?php for($i=1;$i<=10;$i++): ?>
 																		<tr>
 																			<td contenteditable="true"><?php echo e($i); ?></td>
 																			<td contenteditable="true"></td>
 																			<td contenteditable="true"></td>
 																			<td contenteditable="true"></td>
-																			
+																			<td contenteditable="true"></td>
+																			<td contenteditable="true"></td>
+																			<td contenteditable="true"></td>
+												
 																		</tr>
 																	<?php endfor; ?>
 																	<tr class="hide">
@@ -204,21 +214,18 @@
 																		<td contenteditable="true"></td>
 																		<td contenteditable="true"></td>
 																		<td contenteditable="true"></td>
+																		<td contenteditable="true"></td>
+																		<td contenteditable="true"></td>
+																		<td contenteditable="true"></td>
 																		
 																	</tr>
 																</table>
+																<?php endfor; ?>
 															</div>
 															<p id="export"></p>
 														</div>
 
-																														
-
-														<input type="hidden" name="status" value="1" />
 														
-														<input type="hidden" id="project_table_info" name="project_table_info" value="">
-														<input type="hidden" id="project_order_table_info" name="project_order_table_info" value="">
-														<input type="hidden" name="admin_id" value="<?php echo e(Auth::guard('admin')->user()->id); ?>">
-
 														<div class="text-center">
 															<span onClick="onSumbitClick()" class="btn btn-primary"><?php echo e(__('Create Project')); ?></span>
 														</div>

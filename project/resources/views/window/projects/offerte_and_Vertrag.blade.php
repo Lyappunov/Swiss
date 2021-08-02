@@ -7,18 +7,21 @@
 
 @endsection
 @section('content')
+<?php
+	$name_array = array('Rabatt','Netto','Mwst','Total');
+?>
 
 						<div class="content-area">
 							<div class="mr-breadcrumb">
 								<div class="row">
 									<div class="col-lg-12">
-											<h4 class="heading">{{ __('New Project') }} <a class="add-btn" href="{{ route('admin.dashboard') }}"><i class="fas fa-arrow-left"></i> {{ __('Back') }}</a></h4>
+											<h4 class="heading">{{ __('Offerte & Vertrag') }} <a class="add-btn" href="{{ route('admin.dashboard') }}"><i class="fas fa-arrow-left"></i> {{ __('Back') }}</a></h4>
 											<ul class="links">
 												<li>
-													<a href="javascript:;">{{ __('Projects') }} </a>
+													<a href="javascript:;">{{ __('Dashboard') }} </a>
 												</li>
                                                 <li>
-                                                    <a href="javascript:;">{{ __('New Project') }} </a>
+                                                    <a href="javascript:;">{{ __('Offerte & Vertrag') }} </a>
                                                 </li>
 											</ul>
 									</div>
@@ -37,11 +40,11 @@
 
 														<div class="row">
 
-															<div class="col-lg-6 col-12">
+															<div class="col-lg-12 col-12">
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Project Number') }}* </h4>
+																			<h4 class="heading">{{ __('Betreff:') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
@@ -52,7 +55,7 @@
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Project Name') }}* </h4>
+																			<h4 class="heading">{{ __('Offerte Datum') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
@@ -63,18 +66,18 @@
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Contact Date') }}* </h4>
+																			<h4 class="heading">{{ __('Ihre Ref.') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
-																		<input type="date" class="input-field" placeholder="{{ __('Enter Date') }}" name="contact_date" required="" value="">
+																		<input type="text" class="input-field" placeholder="{{ __('Enter Date') }}" name="contact_date" required="" value="">
 																	</div>
 																</div>
 
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Your Ref') }}* </h4>
+																			<h4 class="heading">{{ __('Gültigkeit') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
@@ -85,18 +88,18 @@
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Offer Date ') }}* </h4>
+																			<h4 class="heading">{{ __('Ausführungs Termin') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
-																		<input type="date" class="input-field" placeholder="{{ __('Enter offer date') }}" name="offer_date">
+																		<input type="text" class="input-field" placeholder="{{ __('Enter offer date') }}" name="offer_date">
 																	</div>
 																</div>
 
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Appointment Place') }}* </h4>
+																			<h4 class="heading">{{ __('Projekt Nr') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
@@ -107,7 +110,7 @@
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Project Object') }}* </h4>
+																			<h4 class="heading">{{ __('Objekt') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
@@ -118,7 +121,7 @@
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Project administration') }}* </h4>
+																			<h4 class="heading">{{ __('Verwaltung') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
@@ -129,7 +132,7 @@
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Project road') }}* </h4>
+																			<h4 class="heading">{{ __('Strasse') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
@@ -140,7 +143,7 @@
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Project place') }}* </h4>
+																			<h4 class="heading">{{ __('Ort') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
@@ -151,7 +154,7 @@
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Customer') }}* </h4>
+																			<h4 class="heading">{{ __('Kontakt') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
@@ -166,7 +169,7 @@
 																<div class="row">
 																	<div class="col-lg-4">
 																		<div class="left-area">
-																			<h4 class="heading">{{ __('Contact') }}* </h4>
+																			<h4 class="heading">{{ __('Tel:') }}* </h4>
 																		</div>
 																	</div>
 																	<div class="col-lg-7">
@@ -174,94 +177,11 @@
 																	</div>
 																</div>
 
-																<div class="row">
-																	<div class="col-lg-4">
-																		<div class="left-area">
-																			<h4 class="heading">{{ __('Phone number') }}* </h4>
-																		</div>
-																	</div>
-																	<div class="col-lg-7">
-																		<input type="text" class="input-field" placeholder="{{ __('Enter phone number') }}" name="phone" required="" value="">
-																	</div>
-																</div>
-															</div>
-
-															<div class="col-lg-6 col-12">
-																<div class="row">
-																	<div class="col-lg-4">
-																	<div class="left-area">
-																		<h4 class="heading">{{ __('Project Image') }} *</h4>
-																	</div>
-																	</div>
-																	<div class="col-lg-7">
-																		<div class="row">
-																			<div class="panel panel-body">
-																				<div class="span4 cropme text-center" id="landscape" style="width: 400px; height: 400px; border: 1px dashed black;">
-																				</div>
-																			</div>
-																		</div>
-
-																			<a href="javascript:;" id="crop-image" class="d-inline-block mybtn1">
-																				<i class="icofont-upload-alt"></i> {{ __('Upload Image Here') }}
-																			</a>
-																	</div>
-																</div>
-
-																<input type="hidden" id="feature_photo" name="photo" value="">
-
-																<input type="file" name="gallery[]" class="hidden" id="uploadgallery" accept="image/*" multiple>
-																
-																<div class="row">
-																	<div class="col-lg-4">
-																		<div class="left-area">
-																			<h4 class="heading">
-																				{{ __('Project Gallery Images') }}
-																			</h4>
-																		</div>
-																	</div>
-																	<div class="col-lg-7">
-																		<a href="#" class="set-gallery"  data-toggle="modal" data-target="#setgallery">
-																			<i class="icofont-plus"></i> {{ __('Set Gallery') }}
-																		</a>
-																	</div>
-																</div>
-
-																<div class="showbox">
-																	<div class="row">
-																		<div class="col-lg-4">
-																			<div class="left-area">
-
-																			</div>
-																		</div>
-																		<div class="col-lg-7">
-																			<div class="featured-keyword-area">
-																				<div class="feature-tag-top-filds" id="whole-section">
-																					<div class="feature-area">
-																						<span class="remove whole-remove"><i class="fas fa-times"></i></span>
-																						<div class="row">
-																							<div class="col-lg-6">
-																							<input type="number" name="whole_sell_qty[]" class="input-field" placeholder="{{ __('Enter Quantity') }}" min="0">
-																							</div>
-
-																							<div class="col-lg-6">
-																							<input type="number" name="whole_sell_discount[]" class="input-field" placeholder="{{ __('Enter Discount Percentage') }}" min="0" />
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-
-																				<a href="javascript:;" id="whole-btn" class="add-fild-btn"><i class="icofont-plus"></i> {{ __('Add More Field') }}</a>
-																			</div>
-																		</div>
-																	</div>
-																</div>
+									
 															</div>
 
 														</div>
 
-														<div style="margin:30px 0px; text-align:center;">
-															<img  src="{{asset('assets/images/window1.png')}}" alt="" style="width:70%;">
-														</div>
 
 														<div class="project_table" id="project_table_1">
 															<div style="text-align:center;">
@@ -279,10 +199,11 @@
 																		<th>M2</th>
 																		<th>Menge</th>
 																		<th>Produkt Bezeichnung</th>
-																		<th>Notizen</th>
-																		<th>
-																			<span class="table-add" attr="1"><i class="icofont-plus-square"></i></span>
-																		</th>
+																		<th>Einkaufs Preis</th>
+																		<th>VP Exkl.</th>
+																		<th>Einkaufspreis Ware</th>
+																		<th>Aufwand:</th>
+																		
 																	</tr>
 																	@for($i=1;$i<=10;$i++)
 																		<tr>
@@ -296,12 +217,14 @@
 																			<td contenteditable="true"></td>
 																			<td contenteditable="true"></td>
 																			<td contenteditable="true"></td>
-																			<td>
-																				<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
-																			</td>
+																			<th contenteditable="true"></th>
+																			<th contenteditable="true" colspan='2'></th>
+																			
 																		</tr>
 																	@endfor
-																	<tr class="hide">
+																	<tr >
+																		<td contenteditable="true">11</td>
+																		<td contenteditable="true">Total</td>
 																		<td contenteditable="true"></td>
 																		<td contenteditable="true"></td>
 																		<td contenteditable="true"></td>
@@ -309,110 +232,37 @@
 																		<td contenteditable="true"></td>
 																		<td contenteditable="true"></td>
 																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td>
-																			<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
-																		</td>
+																		<td contenteditable="true" ></td>
+																		<td contenteditable="true" ></td>
+																		<th contenteditable="true" colspan='2'></th>
+																		
 																	</tr>
+																	@for($i=0; $i < sizeof($name_array); $i++)
+																	<tr >
+																		<td contenteditable="true">{{$i + 12}}</td>
+																		<td contenteditable="true">{{$name_array[$i]}}</td>
+																		<td contenteditable="true"></td>
+																		<td contenteditable="true"></td>
+																		<td contenteditable="true"></td>
+																		<td contenteditable="true"></td>
+																		<td contenteditable="true"></td>
+																		<td contenteditable="true"></td>
+																		<td contenteditable="true"></td>
+																		<td contenteditable="true" colspan='2'></td>
+																		@if($i==1)
+																		<th contenteditable="true" colspan='2' rowspan='3'>Netto Marge</th>
+																		@else
+																		<th contenteditable="true" colspan='2'></th>
+																		@endif
+																		
+																	</tr>
+																	@endfor
 																</table>
 															</div>
 															<p id="export"></p>
 														</div>
 
-														<span id="table_add" class="btn btn-primary">
-															Add <i class="icofont-plus-circle"></i>
-														</span>
-
-														<span id="table_delete" class="btn btn-danger">
-															Delete <i class="icofont-ui-delete"></i>
-														</span>
-
-														<div style="margin:30px 0px; text-align:center;">
-															<img  src="{{asset('assets/images/window2.png')}}" alt="" style="width:70%;">
-														</div>
-
-														<div class="order_table_1">
-															<div style="text-align:center;">
-																<h3>Maas und Infos Gefäll Dach</h3>
-															</div>
-															<div id="order_table_1" class="order-table-editable" >
-																<table class="table">
-																	<tr>
-																		<th attr="number">Pos</th>
-																		<th attr="tech">Technische Info</th>
-																		<th attr="rear">Hinten Maas (mm)</th>
-																		<th attr="front">Vorne Maas (mm)</th>
-																		<th attr="notify">Notize</th>
-																		<th>
-																			<span class="table-add-order" attr="1"><i class="icofont-plus-square"></i></span>
-																		</th>
-																	</tr>
-																	@for($i=1;$i<=12;$i++)
-																		<tr>
-																			<td contenteditable="true">{{$i}}</td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td>
-																				<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
-																			</td>
-																		</tr>
-																	@endfor
-																	<tr class="hide_order">
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td contenteditable="true"></td>
-																		<td>
-																			<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
-																		</td>
-																	</tr>
-																</table>
-															</div>
-														</div>
-
-														<div class="order_table_2">
-															<div style="text-align:center;">
-																<h3>Maas und Infos Flach Dach</h3>
-															</div>
-															<div id="order_table_2" class="order-table-editable" >
-																<table class="table">
-																	<tr>
-																		<th attr="number">Pos</th>
-																		<th attr="tech">Technische Info</th>
-																		<th attr="rear">Hinten Maas (mm)</th>
-																		<th attr="front">Vorne Maas (mm)</th>
-																		<th attr="notify">Notize</th>
-																		<th>
-																			<span class="table-add-order" attr="2"><i class="icofont-plus-square"></i></span>
-																		</th>
-																	</tr>
-																	@for($i=1;$i<=12;$i++)
-																		<tr>
-																			<td contenteditable="true">{{$i}}</td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td contenteditable="true"></td>
-																			<td>
-																				<span class="table-remove glyphicon glyphicon-remove"><i class="icofont-ui-delete"></i></span>
-																			</td>
-																		</tr>
-																	@endfor
-																</table>
-															</div>
-														</div>																
-
-														<input type="hidden" name="status" value="1" />
 														
-														<input type="hidden" id="project_table_info" name="project_table_info" value="">
-														<input type="hidden" id="project_order_table_info" name="project_order_table_info" value="">
-														<input type="hidden" name="admin_id" value="{{Auth::guard('admin')->user()->id}}">
-
 														<div class="text-center">
 															<span onClick="onSumbitClick()" class="btn btn-primary">{{ __('Create Project') }}</span>
 														</div>
