@@ -299,27 +299,51 @@ class ProjectController extends Controller
     }
     public function offerte_bestellung()
     {
-        return view('window.projects.blank');
+        $last = Project::orderBy('id', 'DESC')->first();
+        $new_index = $last->id + 1;
+        $new_index = sprintf("%'.08d",$new_index);
+        $customers = Customer::all();
+        return view('window.projects.offerte_bestellung', compact('new_index','customers'));
     }
     public function einkauf()
     {
-        return view('window.projects.blank');
+        $last = Project::orderBy('id', 'DESC')->first();
+        $new_index = $last->id + 1;
+        $new_index = sprintf("%'.08d",$new_index);
+        $customers = Customer::all();
+        return view('window.projects.einkauf', compact('new_index','customers'));
     }
     public function offerte_and_Vertrag()
     {
-        return view('window.projects.blank');
+        $last = Project::orderBy('id', 'DESC')->first();
+        $new_index = $last->id + 1;
+        $new_index = sprintf("%'.08d",$new_index);
+        $customers = Customer::all();
+        return view('window.projects.offerte_and_Vertrag', compact('new_index','customers'));
     }
     public function rechnung()
     {
-        return view('window.projects.blank');
+        $last = Project::orderBy('id', 'DESC')->first();
+        $new_index = $last->id + 1;
+        $new_index = sprintf("%'.08d",$new_index);
+        $customers = Customer::all();
+        return view('window.projects.rechnung', compact('new_index','customers'));
     }
     public function kommunikation()
     {
-        return view('window.projects.blank');
+        $last = Project::orderBy('id', 'DESC')->first();
+        $new_index = $last->id + 1;
+        $new_index = sprintf("%'.08d",$new_index);
+        $customers = Customer::all();
+        return view('window.projects.kommunikation', compact('new_index','customers'));
     }
     public function termine()
     {
-        return view('window.projects.blank');
+        $last = Project::orderBy('id', 'DESC')->first();
+        $new_index = $last->id + 1;
+        $new_index = sprintf("%'.08d",$new_index);
+        $customers = Customer::all();
+        return view('window.projects.termine', compact('new_index','customers'));
     }
     public function new_event()
     {
